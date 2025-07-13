@@ -36,4 +36,19 @@ const results = [
     ],
     score: 10,
   },
+  {
+    experience: "passive interest",
+    uses: [
+      "primary output",
+      "secondary output",
+      "explain concepts",
+      "brainstorming",
+    ],
+    score: 7,
+  },
+  {
+    experience: "senior level",
+    uses: [],
+    score: 8,
+  },
 ];
