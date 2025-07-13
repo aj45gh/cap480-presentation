@@ -1,11 +1,10 @@
-import { Conisoft, Edtech, Chatbots } from "@/components/references";
+import { ContentWithSidebar } from "@/components/app-sidebar";
+import { References } from "@/components/references";
 
 export default function Page() {
   return (
-    <div className="flex flex-col">
-      <Conisoft />
-      <Edtech />
-      <Chatbots />
-    </div>
+    <ContentWithSidebar headerText="References">
+      <References />
+    </ContentWithSidebar>
   );
 }
