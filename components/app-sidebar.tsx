@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -34,6 +35,7 @@ const items = [
     title: "Considerations",
     url: "/considerations",
   },
+  { title: "Conclusion", url: "/conclusion" },
   { title: "References", url: "/references" },
 ];
 
@@ -79,6 +81,14 @@ function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>Stephen James</SidebarMenuItem>
+          <SidebarMenuItem>CAP 480</SidebarMenuItem>
+          <SidebarMenuItem>ECPI University</SidebarMenuItem>
+          <SidebarMenuItem>7/13/2025</SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarFooter>
     </Sidebar>
   );
 }
