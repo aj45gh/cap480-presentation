@@ -12,24 +12,25 @@ import {
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
   },
   {
     title: "Problem",
-    url: "#",
+    url: "/problem",
   },
   {
     title: "Solution",
-    url: "#",
+    url: "/solution",
   },
   {
     title: "Data",
-    url: "#",
+    url: "/data",
   },
   {
     title: "Considerations",
-    url: "#",
+    url: "/considerations",
   },
+  { title: "References", url: "/references" },
 ];
 
 export function AppSidebar() {
