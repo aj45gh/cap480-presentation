@@ -48,11 +48,11 @@ export function ContentWithSidebar({
     <SidebarProvider>
       <AppSidebar />
       <main className="flex w-full min-h-screen flex-col">
-        <div className="sticky top-0 grid content-center mb-2">
+        <div className="sticky top-0 grid content-center mb-2 bg-background z-99">
           <SidebarTrigger className="absolute left-2 top-2" />
           <span className="text-xl text-center py-2">{headerText}</span>
         </div>
-        {children}
+        <div>{children}</div>
       </main>
     </SidebarProvider>
   );
