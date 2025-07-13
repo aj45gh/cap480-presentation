@@ -4,7 +4,6 @@ import Image from "next/image";
 
 import Autoplay from "embla-carousel-autoplay";
 
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -50,40 +49,5 @@ export function AssistantCarousel() {
         <CarouselNext className="right-2" />
       </Carousel>
     </div>
-  );
-}
-
-export function OldAssistantCarousel() {
-  return (
-    <Carousel className="w-full">
-      <CarouselContent>
-        <CarouselItem className="flex justify-center items-center">
-          <Card>
-            <CardContent>
-              <Image
-                src="/images/screenshots/codegpt.png"
-                alt="CodeGPT"
-                width="960"
-                height="470"
-              />
-            </CardContent>
-          </Card>
-        </CarouselItem>
-        <CarouselItem className="flex justify-center items-center">
-          <Card>
-            <CardContent>
-              <Image
-                src="/images/screenshots/gemini.png"
-                alt="Gemini"
-                width="960"
-                height="470"
-              />
-            </CardContent>
-          </Card>
-        </CarouselItem>
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
   );
 }
