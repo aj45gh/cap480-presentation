@@ -17,6 +17,9 @@ const images = [
   { src: "codegpt", alt: "CodeGPT" },
   { src: "gemini", alt: "Gemini" },
   { src: "v0", alt: "v0" },
+  { src: "cursor", alt: "Cursor" },
+  { src: "tabnine", alt: "Tabnine" },
+  { src: "copilot", alt: "Copilot" },
 ];
 
 export function AssistantCarousel() {
