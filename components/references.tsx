@@ -23,12 +23,16 @@ export function Conisoft() {
       313-321&nbsp;
       <a
         className="ref-link"
-        href="https://doi.org/10.1109/CONISOFT63288.2024.00048"
+        href="http://dx.doi.org.revproxy.ecpi.edu/10.1109/CONISOFT63288.2024.00048"
       >
-        https://doi.org/10.1109/CONISOFT63288.2024.00048
+        http://dx.doi.org.revproxy.ecpi.edu/10.1109/CONISOFT63288.2024.00048
       </a>
     </p>
   );
+}
+
+export function ConisoftIntext(text: string) {
+  return `${text} (Tona et al., 2024)`;
 }
 
 export function Edtech() {
@@ -49,6 +53,10 @@ export function Edtech() {
   );
 }
 
+export function EdTechIntext(text: string) {
+  return `${text} (Huang, 2024)`;
+}
+
 export function Chatbots() {
   return (
     <p className="-indent-8">
@@ -66,4 +74,8 @@ export function Chatbots() {
       </a>
     </p>
   );
+}
+
+export function ChatbotsIntext(text: string) {
+  return `${text} (Davar et al., 2025)`;
 }
