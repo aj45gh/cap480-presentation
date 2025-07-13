@@ -3,7 +3,7 @@ import { FirstPie } from "@/components/chart";
 
 export default function Page() {
   return (
-    <ContentWithSidebar headerText="Placeholder header">
+    <ContentWithSidebar headerText="How are Developers Using AI?">
       <FirstPie />
     </ContentWithSidebar>
   );
