@@ -31,16 +31,16 @@ export function Conisoft() {
   );
 }
 
-export function ConisoftIntext(text: string) {
-  return `${text} (Tona et al., 2024)`;
+export function ConisoftIntext({ children }: { children: string }) {
+  return `"${children}" (Tona et al., 2024)`;
 }
 
 export function Edtech() {
   return (
     <p className="-indent-8">
-      Huang, H. (2024). Promoting students' creative and design thinking with
-      generative AI-supported co-regulated learning: Evidence from digital game
-      development projects in healthcare courses.&nbsp;
+      Huang, H. (2024). Promoting students&apos; creative and design thinking
+      with generative AI-supported co-regulated learning: Evidence from digital
+      game development projects in healthcare courses.&nbsp;
       <span className="italic">Educational Technology & Society, 27</span>(4),
       487+&nbsp;
       <a
@@ -53,8 +53,8 @@ export function Edtech() {
   );
 }
 
-export function EdTechIntext(text: string) {
-  return `${text} (Huang, 2024)`;
+export function EdTechIntext({ children }: { children: string }) {
+  return `"${children}" (Huang, 2024)`;
 }
 
 export function Chatbots() {
@@ -76,6 +76,6 @@ export function Chatbots() {
   );
 }
 
-export function ChatbotsIntext(text: string) {
-  return `${text} (Davar et al., 2025)`;
+export function ChatbotsIntext({ children }: { children: string }) {
+  return `"${children}" (Davar et al., 2025)`;
 }
