@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import {
   Sidebar,
   SidebarContent,
@@ -7,6 +9,8 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarProvider,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 
 const items = [
@@ -33,7 +37,28 @@ const items = [
   { title: "References", url: "/references" },
 ];
 
-export function AppSidebar() {
+export function ContentWithSidebar({
+  children,
+  headerText,
+}: {
+  children: ReactNode;
+  headerText: string;
+}) {
+  return (
+    <SidebarProvider>
+      <AppSidebar />
+      <main className="flex w-full min-h-screen flex-col">
+        <div className="sticky top-0 grid content-center mb-2">
+          <SidebarTrigger className="absolute left-2 top-2" />
+          <span className="text-xl text-center py-2">{headerText}</span>
+        </div>
+        {children}
+      </main>
+    </SidebarProvider>
+  );
+}
+
+function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
