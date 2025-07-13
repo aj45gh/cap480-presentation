@@ -14,8 +14,9 @@ import {
 } from "@/components/ui/carousel";
 
 const images = [
-  { src: "/images/screenshots/codegpt.png", alt: "CodeGPT" },
-  { src: "/images/screenshots/gemini.png", alt: "Gemini" },
+  { src: "codegpt", alt: "CodeGPT" },
+  { src: "gemini", alt: "Gemini" },
+  { src: "v0", alt: "v0" },
 ];
 
 export function AssistantCarousel() {
@@ -31,12 +32,12 @@ export function AssistantCarousel() {
             <CarouselItem key={index}>
               <div className="relative aspect-video w-full">
                 <Image
-                  src={image.src}
+                  src={`/images/screenshots/${image.src}.png`}
                   alt={image.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, 75wv"
                   className="object-cover rounded-md"
-                  priority={index === 0}
+                  priority
                 />
               </div>
             </CarouselItem>
