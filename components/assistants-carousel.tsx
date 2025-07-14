@@ -27,7 +27,7 @@ export function AssistantCarousel() {
       <Carousel
         className="w-[75%]"
         opts={{ loop: true }}
-        plugins={[Autoplay({ delay: 3000 })]}
+        plugins={[Autoplay({ delay: 4000 })]}
       >
         <CarouselContent>
           {images.map((image, index) => (
