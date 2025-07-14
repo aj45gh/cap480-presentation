@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 
 import { ContentWithSidebar } from "@/components/app-sidebar";
+import { NextButton } from "@/components/next-button";
 
 export default function Home() {
   return (
@@ -58,6 +59,7 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+          <NextButton link="/data" />
         </div>
       </div>
     </ContentWithSidebar>
