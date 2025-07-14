@@ -69,8 +69,8 @@ export default function Home() {
                     .
                   </li>
                   <li>
-                    Students don't receive feedback on their work or train of
-                    thought until they have submitted the final product.
+                    Students don&apos;t receive feedback on their work or train
+                    of thought until they have submitted the final product.
                   </li>
                   <li>
                     Instructors have limited time to answer questions and
