@@ -31,10 +31,6 @@ const items = [
     title: "Data",
     url: "/data",
   },
-  {
-    title: "Considerations",
-    url: "/considerations",
-  },
   { title: "Conclusion", url: "/conclusion" },
   { title: "References", url: "/references" },
 ];
@@ -52,7 +48,7 @@ export function ContentWithSidebar({
       <main className="flex w-full min-h-screen flex-col">
         <div className="sticky top-0 grid content-center mb-2 bg-background z-99">
           <SidebarTrigger className="absolute left-2 top-2" />
-          <span className="text-xl text-center py-2">{headerText}</span>
+          <span className="text-2xl text-center py-2">{headerText}</span>
         </div>
         <div>{children}</div>
       </main>
