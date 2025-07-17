@@ -23,6 +23,7 @@ export function Conisoft() {
       313-321&nbsp;
       <a
         className="ref-link"
+        target="_blank"
         href="http://dx.doi.org.revproxy.ecpi.edu/10.1109/CONISOFT63288.2024.00048"
       >
         http://dx.doi.org.revproxy.ecpi.edu/10.1109/CONISOFT63288.2024.00048
@@ -45,10 +46,12 @@ export function Edtech() {
       487+&nbsp;
       <a
         className="ref-link"
-        href="http://dx.doi.org.revproxy.ecpi.edu/10.30191/ETS.202410_27(4).TP04"
+        target="_blank"
+        // href="http://dx.doi.org.revproxy.ecpi.edu/10.30191/ETS.202410_27(4).TP04"
+        href="https://drive.google.com/file/d/1fo_-X1H6deO2AZ5KchAioYvr4gGzRqLo/view"
       >
-        http://dx.doi.org.revproxy.ecpi.edu/10.30191/ETS.202410_27(4).TP04
-        {/* TODO: Figure out how to cite accessible link - https://www.j-ets.net/collection/published-issues/27_4#h.6citjhn3h8bw */}
+        https://drive.google.com/file/d/1fo_-X1H6deO2AZ5KchAioYvr4gGzRqLo/view
+        {/* http://dx.doi.org.revproxy.ecpi.edu/10.30191/ETS.202410_27(4).TP04 */}
       </a>
     </p>
   );
@@ -69,6 +72,7 @@ export function Chatbots() {
       (3).&nbsp;
       <a
         className="ref-link"
+        target="_blank"
         href="http://dx.doi.org.revproxy.ecpi.edu/10.3390/info16030235"
       >
         http://dx.doi.org.revproxy.ecpi.edu/10.3390/info16030235
