@@ -88,174 +88,84 @@ const ideaUsage = [
   { name: "Senior Level", uv: 2 / 3, fill: "var(--chart-1)" },
 ];
 
+interface UsageData {
+  name: string;
+  uv: number;
+  fill: string;
+}
+
+interface ChartProps {
+  title: string;
+  description: string;
+  data: UsageData[];
+}
+
+function Chart({ title, description, data }: ChartProps) {
+  return (
+    <Card className="col-span-2 md:col-span-1">
+      <CardHeader className="text-center">
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <ChartContainer config={{}}>
+          <ResponsiveContainer
+            width="100%"
+            aspect={1}
+            className="overflow-hidden"
+          >
+            <RadialBarChart
+              data={data}
+              startAngle={180}
+              endAngle={0}
+              innerRadius="50%"
+              outerRadius="90%"
+            >
+              <PolarAngleAxis tick={false} domain={[0, 1]} type="number" />
+              <RadialBar dataKey="uv" background />
+              {data.map((d, idx) => (
+                <text
+                  key={d.name}
+                  x="50%"
+                  y={`${50 - idx * 5}%`}
+                  style={{ fill: d.fill }}
+                  textAnchor="middle"
+                >
+                  {`${d.name} ${(d.uv * 100).toFixed(0)}%`}
+                </text>
+              ))}
+            </RadialBarChart>
+          </ResponsiveContainer>
+        </ChartContainer>
+      </CardContent>
+    </Card>
+  );
+}
+
 export function FirstPie() {
   return (
     <div className="w-full flex justify-content justify-center">
       <div className="w-[75%] grid grid-cols-2 gap-2">
-        <Card className="col-span-2 md:col-span-1">
-          <CardHeader className="text-center">
-            <CardTitle>Primary Output</CardTitle>
-            <CardDescription>
-              To generate code, draft communication, etc.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ChartContainer config={{}}>
-              <ResponsiveContainer width="100%" aspect={1}>
-                <RadialBarChart
-                  data={primaryUsage}
-                  startAngle={180}
-                  endAngle={0}
-                  innerRadius="50%"
-                  outerRadius="90%"
-                >
-                  <PolarAngleAxis tick={false} domain={[0, 1]} type="number" />
-                  <RadialBar dataKey="uv" background />
-                  <text
-                    x="50%"
-                    y="45%"
-                    style={{ fill: "var(--chart-1)" }}
-                    textAnchor="middle"
-                  >
-                    {`Senior Level ${((2 / 3) * 100).toFixed(0)}%`}
-                  </text>
-                  <text
-                    x="50%"
-                    y="50%"
-                    style={{ fill: "var(--chart-2)" }}
-                    textAnchor="middle"
-                  >
-                    {`Passive Interest ${((3 / 5) * 100).toFixed(0)}%`}
-                  </text>
-                </RadialBarChart>
-              </ResponsiveContainer>
-            </ChartContainer>
-          </CardContent>
-        </Card>
-        <Card className="col-span-2 md:col-span-1">
-          <CardHeader className="text-center">
-            <CardTitle>Secondary Output</CardTitle>
-            <CardDescription>
-              To generate documentation, automated tests, summary, etc.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ChartContainer config={{}}>
-              <ResponsiveContainer width="100%" aspect={1}>
-                <RadialBarChart
-                  data={secondaryUsage}
-                  startAngle={180}
-                  endAngle={0}
-                  innerRadius="50%"
-                  outerRadius="90%"
-                >
-                  <PolarAngleAxis tick={false} domain={[0, 1]} type="number" />
-                  <RadialBar dataKey="uv" background />
-                  <text
-                    x="50%"
-                    y="45%"
-                    style={{ fill: "var(--chart-1)" }}
-                    textAnchor="middle"
-                  >
-                    {`Senior Level ${((2 / 3) * 100).toFixed(0)}%`}
-                  </text>
-                  <text
-                    x="50%"
-                    y="50%"
-                    style={{ fill: "var(--chart-2)" }}
-                    textAnchor="middle"
-                  >
-                    {`Passive Interest ${((2 / 5) * 100).toFixed(0)}%`}
-                  </text>
-                </RadialBarChart>
-              </ResponsiveContainer>
-            </ChartContainer>
-          </CardContent>
-        </Card>
-        <Card className="col-span-2 md:col-span-1">
-          <CardHeader className="text-center">
-            <CardTitle>Learning</CardTitle>
-            <CardDescription>
-              To explain unfamiliar concepts in an interactive way
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ChartContainer config={{}}>
-              <ResponsiveContainer width="100%" aspect={1}>
-                <RadialBarChart
-                  data={learningUsage}
-                  startAngle={180}
-                  endAngle={0}
-                  innerRadius="50%"
-                  outerRadius="90%"
-                >
-                  <PolarAngleAxis tick={false} domain={[0, 1]} type="number" />
-                  <RadialBar dataKey="uv" background />
-                  <text
-                    x="50%"
-                    y="45%"
-                    style={{ fill: "var(--chart-1)" }}
-                    textAnchor="middle"
-                  >
-                    {`Senior Level ${((2 / 3) * 100).toFixed(0)}%`}
-                  </text>
-                  <text
-                    x="50%"
-                    y="50%"
-                    style={{ fill: "var(--chart-2)" }}
-                    textAnchor="middle"
-                  >
-                    {`Passive Interest ${((4 / 5) * 100).toFixed(0)}%`}
-                  </text>
-                </RadialBarChart>
-              </ResponsiveContainer>
-            </ChartContainer>
-          </CardContent>
-        </Card>
-        <Card className="col-span-2 md:col-span-1">
-          <CardHeader className="text-center">
-            <CardTitle>Ideas</CardTitle>
-            <CardDescription>
-              To engage in dialogue for brainstorming or troubleshooting
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ChartContainer config={{}}>
-              <ResponsiveContainer
-                width="100%"
-                aspect={1}
-                className="overflow-hidden"
-              >
-                <RadialBarChart
-                  data={ideaUsage}
-                  startAngle={180}
-                  endAngle={0}
-                  innerRadius="50%"
-                  outerRadius="90%"
-                >
-                  <PolarAngleAxis tick={false} domain={[0, 1]} type="number" />
-                  <RadialBar dataKey="uv" background />
-                  <text
-                    x="50%"
-                    y="45%"
-                    style={{ fill: "var(--chart-1)" }}
-                    textAnchor="middle"
-                  >
-                    {`Senior Level ${((2 / 3) * 100).toFixed(0)}%`}
-                  </text>
-                  <text
-                    x="50%"
-                    y="50%"
-                    style={{ fill: "var(--chart-2)" }}
-                    textAnchor="middle"
-                  >
-                    {`Passive Interest ${((4 / 5) * 100).toFixed(0)}%`}
-                  </text>
-                </RadialBarChart>
-              </ResponsiveContainer>
-            </ChartContainer>
-          </CardContent>
-        </Card>
+        <Chart
+          title="Primary Output"
+          description="To generate code, draft communication, etc."
+          data={primaryUsage}
+        />
+        <Chart
+          title="Secondary Output"
+          description="To generate documentation, automated tests, summary, etc."
+          data={secondaryUsage}
+        />
+        <Chart
+          title="Learning"
+          description="To explain unfamiliar concepts in an interactive way"
+          data={learningUsage}
+        />
+        <Chart
+          title="Ideas"
+          description="To engage in dialogue for brainstorming or troubleshooting"
+          data={ideaUsage}
+        />
       </div>
     </div>
   );
