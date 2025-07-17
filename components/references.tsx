@@ -2,9 +2,9 @@ export function References() {
   return (
     <div className="w-full flex justify-content justify-center">
       <div className="w-[50%] pl-8 flex flex-col gap-4">
-        <Conisoft />
-        <Edtech />
         <Chatbots />
+        <Edtech />
+        <Conisoft />
       </div>
     </div>
   );
