@@ -221,7 +221,11 @@ export function FirstPie() {
           </CardHeader>
           <CardContent>
             <ChartContainer config={{}}>
-              <ResponsiveContainer width="100%" aspect={1}>
+              <ResponsiveContainer
+                width="100%"
+                aspect={1}
+                className="overflow-hidden"
+              >
                 <RadialBarChart
                   data={ideaUsage}
                   startAngle={180}
