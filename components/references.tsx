@@ -45,11 +45,10 @@ export function Edtech() {
       487+&nbsp;
       <a
         className="ref-link"
-        // href="http://dx.doi.org.revproxy.ecpi.edu/10.30191/ETS.202410_27(4).TP04"
-        href="https://doi.org/10.1016/j.compedu.2024.105071"
+        href="http://dx.doi.org.revproxy.ecpi.edu/10.30191/ETS.202410_27(4).TP04"
       >
-        {/* http://dx.doi.org.revproxy.ecpi.edu/10.30191/ETS.202410_27(4).TP04 */}
-        https://doi.org/10.1016/j.compedu.2024.105071
+        http://dx.doi.org.revproxy.ecpi.edu/10.30191/ETS.202410_27(4).TP04
+        {/* TODO: Figure out how to cite accessible link - https://www.j-ets.net/collection/published-issues/27_4#h.6citjhn3h8bw */}
       </a>
     </p>
   );
