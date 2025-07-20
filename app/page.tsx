@@ -5,7 +5,10 @@ import { ConisoftIntext } from "@/components/references";
 
 export default function Home() {
   return (
-    <ContentWithSidebar headerText="Code with a Mentor, Not a Crutch">
+    <ContentWithSidebar
+      headerText="Code with a Mentor, Not a Crutch"
+      activePage="Home"
+    >
       <AssistantCarousel />
       <div className="w-full flex justify-content justify-center mt-5">
         <div className="w-[75%]">

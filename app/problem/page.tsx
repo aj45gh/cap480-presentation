@@ -8,13 +8,17 @@ import {
 import { Separator } from "@/components/ui/separator";
 
 import { ContentWithSidebar } from "@/components/app-sidebar";
+import { PrimaryPie } from "@/components/chart";
 import { ChatbotsIntext } from "@/components/references";
 import { ConisoftIntext } from "@/components/references";
 import { NextButton } from "@/components/next-button";
 
-export default function Home() {
+export default function Page() {
   return (
-    <ContentWithSidebar headerText="Educational Challenges and AI">
+    <ContentWithSidebar
+      headerText="Educational Challenges and AI"
+      activePage="Problem"
+    >
       <div className="w-full flex justify-content justify-center">
         <div className="w-[75%]">
           <div className="grid grid-cols-2 gap-2">
@@ -51,38 +55,41 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="col-span-2 md:col-span-1">
-              <CardHeader className="text-center text-lg">
-                <CardTitle>Teaching is a lot of work</CardTitle>
-                <CardDescription>
-                  Grading assignments and providing meaningful feedback is a
-                  time and labor intensive process.
-                </CardDescription>
-              </CardHeader>
-              <Separator />
-              <CardContent>
-                <div className="p-3">
-                  <ul className="list-disc">
-                    <li>
-                      <ChatbotsIntext>
-                        Educators may struggle to monitor student performance in
-                        real time and identify at-risk students
-                      </ChatbotsIntext>
-                      .
-                    </li>
-                    <li>
-                      Students don&apos;t receive feedback on their work or
-                      train of thought until they have submitted the final
-                      product.
-                    </li>
-                    <li>
-                      Instructors have limited time to answer questions and
-                      provide guidance one-on-one.
-                    </li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
+            <PrimaryPie />
+            <div className="col-span-2 flex justify-center">
+              <Card className="w-full md:w-[50%]">
+                <CardHeader className="text-center text-lg">
+                  <CardTitle>Teaching is a lot of work</CardTitle>
+                  <CardDescription>
+                    Grading assignments and providing meaningful feedback is a
+                    time and labor intensive process.
+                  </CardDescription>
+                </CardHeader>
+                <Separator />
+                <CardContent>
+                  <div className="p-3">
+                    <ul className="list-disc">
+                      <li>
+                        <ChatbotsIntext>
+                          Educators may struggle to monitor student performance
+                          in real time and identify at-risk students
+                        </ChatbotsIntext>
+                        .
+                      </li>
+                      <li>
+                        Students don&apos;t receive feedback on their work or
+                        train of thought until they have submitted the final
+                        product.
+                      </li>
+                      <li>
+                        Instructors have limited time to answer questions and
+                        provide guidance one-on-one.
+                      </li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
           <NextButton link="/solution" />
         </div>

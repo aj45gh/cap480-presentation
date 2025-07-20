@@ -27,24 +27,27 @@ const items = [
     title: "Solution",
     url: "/solution",
   },
+  { title: "Common Concerns", url: "/concerns" },
+  { title: "Conclusion", url: "/conclusion" },
   {
-    title: "Data",
+    title: "Full Survey Data",
     url: "/data",
   },
-  { title: "Conclusion", url: "/conclusion" },
   { title: "References", url: "/references" },
 ];
 
 export function ContentWithSidebar({
   children,
   headerText,
+  activePage = "",
 }: {
   children: ReactNode;
   headerText: string;
+  activePage?: string;
 }) {
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <AppSidebar activePage={activePage} />
       <main className="flex w-full min-h-screen flex-col">
         <div className="sticky top-0 grid content-center mb-2 bg-background z-99">
           <SidebarTrigger className="absolute left-2 top-2" />
@@ -56,7 +59,7 @@ export function ContentWithSidebar({
   );
 }
 
-function AppSidebar() {
+function AppSidebar({ activePage }: { activePage: string }) {
   return (
     <Sidebar>
       <SidebarContent>
@@ -66,7 +69,10 @@ function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={item.title === activePage}
+                  >
                     <a href={item.url}>
                       <span>{item.title}</span>
                     </a>

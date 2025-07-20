@@ -104,7 +104,7 @@ function Chart({ title, description, data }: ChartProps) {
   return (
     <Card className="col-span-2 md:col-span-1">
       <CardHeader className="text-center">
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="text-lg">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
@@ -142,30 +142,54 @@ function Chart({ title, description, data }: ChartProps) {
   );
 }
 
+export function PrimaryPie() {
+  return (
+    <Chart
+      title="Primary Output"
+      description="To generate code, draft communication, etc."
+      data={primaryUsage}
+    />
+  );
+}
+
+export function SecondaryPie() {
+  return (
+    <Chart
+      title="Secondary Output"
+      description="To generate documentation, automated tests, summary, etc."
+      data={secondaryUsage}
+    />
+  );
+}
+
+export function LearningPie() {
+  return (
+    <Chart
+      title="Learning"
+      description="To explain unfamiliar concepts in an interactive way"
+      data={learningUsage}
+    />
+  );
+}
+
+export function IdeaPie() {
+  return (
+    <Chart
+      title="Ideas"
+      description="To engage in dialogue for brainstorming or troubleshooting"
+      data={ideaUsage}
+    />
+  );
+}
+
 export function FirstPie() {
   return (
     <div className="w-full flex justify-content justify-center">
       <div className="w-[75%] grid grid-cols-2 gap-2">
-        <Chart
-          title="Primary Output"
-          description="To generate code, draft communication, etc."
-          data={primaryUsage}
-        />
-        <Chart
-          title="Secondary Output"
-          description="To generate documentation, automated tests, summary, etc."
-          data={secondaryUsage}
-        />
-        <Chart
-          title="Learning"
-          description="To explain unfamiliar concepts in an interactive way"
-          data={learningUsage}
-        />
-        <Chart
-          title="Ideas"
-          description="To engage in dialogue for brainstorming or troubleshooting"
-          data={ideaUsage}
-        />
+        <PrimaryPie />
+        <SecondaryPie />
+        <LearningPie />
+        <IdeaPie />
       </div>
     </div>
   );

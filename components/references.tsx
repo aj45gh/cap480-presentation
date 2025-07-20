@@ -4,6 +4,7 @@ export function References() {
       <div className="w-[50%] pl-8 flex flex-col gap-4">
         <Chatbots />
         <Edtech />
+        <OpenAI />
         <Conisoft />
       </div>
     </div>
@@ -83,4 +84,16 @@ export function Chatbots() {
 
 export function ChatbotsIntext({ children }: { children: string }) {
   return `"${children}" (Davar et al., 2025)`;
+}
+
+export function OpenAI() {
+  return (
+    <p className="-indent-8">
+      OpenAI. (2025).&nbsp;<span className="italic">Sora</span>&nbsp;(Version
+      Turbo) [Artificial intelligence system].&nbsp;
+      <a href="https://sora.chatgpt.com" className="ref-link">
+        https://sora.chatgpt.com
+      </a>
+    </p>
+  );
 }

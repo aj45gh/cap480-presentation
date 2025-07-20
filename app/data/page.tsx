@@ -4,9 +4,12 @@ import { NextButton } from "@/components/next-button";
 
 export default function Page() {
   return (
-    <ContentWithSidebar headerText="How are Developers Using AI?">
+    <ContentWithSidebar
+      headerText="How are Developers Using AI?"
+      activePage="Full Survey Data"
+    >
       <FirstPie />
-      <NextButton link="/conclusion" />
+      <NextButton link="/references" />
     </ContentWithSidebar>
   );
 }

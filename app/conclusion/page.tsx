@@ -7,7 +7,10 @@ import { NextButton } from "@/components/next-button";
 
 export default function Home() {
   return (
-    <ContentWithSidebar headerText="When Using AI to Learn">
+    <ContentWithSidebar
+      headerText="When Using AI to Learn"
+      activePage="Conclusion"
+    >
       <div className="w-full flex justify-content justify-center">
         <div className="w-[75%]">
           <div className="grid grid-cols-2 gap-2">
@@ -15,7 +18,7 @@ export default function Home() {
               <CardHeader className="text-center text-lg">
                 <CardTitle>
                   <div className="flex justify-content justify-center gap-2">
-                    <Check />
+                    <Check className="text-green-600" />
                     <span className="pt-0.5">DO</span>
                   </div>
                 </CardTitle>
@@ -39,7 +42,7 @@ export default function Home() {
               <CardHeader className="text-center text-lg">
                 <CardTitle>
                   <div className="flex justify-content justify-center gap-2">
-                    <X />
+                    <X className="text-red-600" />
                     <span className="pt-0.5">DO NOT</span>
                   </div>
                 </CardTitle>
@@ -56,7 +59,7 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
-          <NextButton link="/references" />
+          <NextButton link="/data" />
         </div>
       </div>
     </ContentWithSidebar>

@@ -3,7 +3,7 @@ import { References } from "@/components/references";
 
 export default function Page() {
   return (
-    <ContentWithSidebar headerText="References">
+    <ContentWithSidebar headerText="References" activePage="References">
       <References />
     </ContentWithSidebar>
   );
