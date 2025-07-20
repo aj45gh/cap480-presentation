@@ -71,9 +71,9 @@ export default function Home() {
                 <div className="hidden md:flex"></div>
                 <div className="col-span-2 md:col-span-1">
                   <p>
-                    Note: Image generated using the prompt "Adult student
+                    Note: Image generated using the prompt &quot;Adult student
                     raising their hand to ask a question in a software
-                    development classroom where the teacher is a robot," by
+                    development classroom where the teacher is a robot,&quot; by
                     OpenAI, Sora, 2025 (
                     <a href="https://sora.chatgpt.com" className="ref-link">
                       https://sora.chatgpt.com

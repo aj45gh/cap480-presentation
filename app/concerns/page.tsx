@@ -40,7 +40,7 @@ export default function Page() {
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger className="text-lg">
-                Using AI won't teach students to think for themselves
+                Using AI won&apos;t teach students to think for themselves
               </AccordionTrigger>
               <AccordionContent>
                 <div className="grid grid-cols-2 gap-2">
